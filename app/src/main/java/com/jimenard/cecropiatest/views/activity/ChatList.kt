@@ -55,40 +55,6 @@ class ChatList : Fragment() {
             initChatViews()
         })
 
-
-        /*recyclerView.setHandler(context!!, this, object :
-            RecyclerViewCommon.Handler<Port>(R.layout.fragment_port_item, ports) {
-            override fun shareIdentity(a: Port, b: Port) = a.port == b.port
-            override fun areContentsTheSame(a: Port, b: Port) = a == b
-            override fun onClickListener(view: View, value: Port) {
-                viewModel.viewModelScope.launch(context = Dispatchers.IO) {
-                    val ip = viewModel.deviceDao.getByIdNow(value.deviceId).ip
-                    withContext(Dispatchers.Main) {
-                        Intent(Intent.ACTION_VIEW).apply {
-                            data = Uri.parse("http://${ip}:${value.port}")
-                        }.also {
-                            startActivity(it)
-                        }
-                    }
-                }
-            }
-
-            override fun bindItem(view: View): (value: Port) -> Unit {
-                val portNumberTextView: TextView = view.portNumberTextView
-                val protocolTextView: TextView = view.protocolTextView
-                val serviceTextView: TextView = view.serviceNameTextView
-
-                return { item ->
-                    portNumberTextView.text = item.port.toString()
-                    protocolTextView.text = item.protocol.toString()
-                    serviceTextView.text = item.description?.serviceName
-
-                }
-            }
-
-        })*/
-
-
         return view
     }
 

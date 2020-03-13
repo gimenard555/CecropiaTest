@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/deviceListFragment">
+    <fragment
+        android:id="@+id/deviceListFragment"
+        android:name="com.jimenard.cecropiatest.views.activity.DeviceListFragment"
+        android:label="fragment_device_list_layout"
+        tools:layout="@layout/fragment_device_list_layout" >
+        <action
+            android:id="@+id/action_deviceListFragment_to_chatList2"
+            app:destination="@id/chatList" />
+        <argument
+            android:name="interface_name"
+            android:defaultValue="wlan0" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatList"
+        android:name="com.jimenard.cecropiatest.views.activity.ChatList"
+        android:label="fragment_chat_list_layout"
+        tools:layout="@layout/fragment_chat_list_layout" />
+</navigation>
